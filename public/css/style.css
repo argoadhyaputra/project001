@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.jumbotron {
+  height: 453px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../../assets/img/jumImg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../assets/img/jumImg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.navMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+}
+
+.navMe a {
+  font-family: "Ubuntu";
+  text-decoration: none;
+  color: #fff;
+  padding: 20px;
+}
+
+.navMenu {
+  display: none;
+}
+
+.jumbotronTitle h2 {
+  color: #fff;
+  font-size: 38px;
+  font-weight: bolder;
+  line-height: 35px;
+}
+
+.jumbotronTitle p {
+  color: #DCDCDC;
+  font-size: 18px;
+}
+
+.jumbotronTitle a {
+  background: white;
+  display: inline-block;
+  color: #000;
+  width: 160px;
+  padding: 5px;
+  text-decoration: none;
+  font-family: "Ubuntu";
+  border-radius: 5px;
+}
+
+.jumbotronTitle a:hover {
+  background: #ebeaea;
+}
+
+@media (max-width: 702px) {
+  .navMe nav {
+    display: none;
+  }
+  .navMe {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .hamburger {
+    z-index: 99 !important;
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+  .hamburger .strip, .hamburger::after, .hamburger::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50px;
+  }
+  .hamburger.is-active:before {
+    -webkit-transform: rotate(45deg) translate(9px, 8px);
+            transform: rotate(45deg) translate(9px, 8px);
+  }
+  .hamburger.is-active .strip {
+    opacity: 0;
+  }
+  .hamburger.is-active:after {
+    -webkit-transform: rotate(-45deg) translate(8px, -6px);
+            transform: rotate(-45deg) translate(8px, -6px);
+  }
+  .navMenu {
+    background: #1b1b1b;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 60px;
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .navMenu.is-active {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .navMenu nav a {
+    display: block;
+    padding: 10px;
+    margin: 20px;
+    width: 130px;
+    height: 40px;
+    background: #0a0a0a;
+    text-decoration: none;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navMenu nav a:hover {
+    background: #111111;
+  }
+  .jumbotronTitle p {
+    font-size: 28px;
+    line-height: 25px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
