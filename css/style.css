@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 .jumbotron {
@@ -118,8 +117,8 @@ body {
         -ms-flex-align: center;
             align-items: center;
     padding-top: 60px;
-    -webkit-transform: translate(100%, 0);
-            transform: translate(100%, 0);
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
