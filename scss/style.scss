@@ -2,23 +2,21 @@
     $fontcolor: #fff;
     $fontcolor2: #DCDCDC;
     $fontBlackColor: #000;
+    $borderRadius:10px;
     
 body {
     margin:0;
     padding:0;
-    // overflow: hidden !important;
+    overflow-x: hidden !important;
 }
-
 .jumbotron {
-    height: 453px;
+    min-height: 453px;
     // overflow-x: hidden !important;
     // width: 100%;
     background-image:  linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url('../img/jumImg.jpg');
     background-size: cover;
     background-position: center;
 }
-
-
 .navMe {
     display:flex;
     justify-content: center;
@@ -35,7 +33,6 @@ body {
     display: none;
     
 }
-
 .jumbotronTitle {
     & h2 {
         color: $fontcolor;
@@ -63,9 +60,73 @@ body {
         }
     }
 }
+.jumbotronFeat {
+    transform: translateY(50%);
+    &  .box {
+        box-shadow: rgba(0, 0, 0, 0.39) 0px 0px 10px;
+        background: white;
+        border-radius: $borderRadius;
 
+        & h2 {
+            font-size: 22px;
+            font-weight: bold;
+        }
 
-@media (max-width: 702px) {
+        & p {
+            font-size: 15px;
+            line-height: 18px;
+            color: grey;
+        }
+    }
+}
+
+@mixin jumbotronFeat($one, $two) {
+    #jumbotronFeat {
+        overflow: hidden;
+        padding: 10px;
+        & .figure{
+            position: relative;
+            width: 100%;
+            display: flex;
+            animation: 10s slider infinite;
+            padding: 0 !important;
+            margin: 0 !important;
+            left: 0;
+            & .box {
+                // margin-top: 0 !important;
+                // margin-bottom: 0 !important;
+                width: 100% !important;
+                margin: 0 19.5px 0 19.5px !important;
+                &:nth-child(3),&:nth-child(1) {
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+    @keyframes slider {
+        0% {
+            left:0;
+        }
+        20% {
+            left: 0;
+        }
+        25% {
+            left: $one;
+        }
+        45% {
+            left: $one;
+        }
+        50% {
+            left: $two;
+        }
+        70% {
+            left: $two;
+        }
+    
+    }
+}
+
+@mixin navMe() {
     .navMe nav{
         display: none;
     }
@@ -145,10 +206,20 @@ body {
             }
         }
     }
+}
+
+@media (min-width: 450px) and (max-width: 767px) {
+    @include navMe();
 
     .jumbotronTitle p {
         font-size: 28px;
         line-height: 25px;
     }
 
+    @include jumbotronFeat(-104.5%, -208%);
+}
+
+@media (max-width:450px) {
+    @include navMe();
+    @include jumbotronFeat(-105.3%, -210%);
 }
