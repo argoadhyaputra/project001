@@ -1,7 +1,23 @@
 body {
   margin: 0;
   padding: 0;
+  min-height: 3000px;
   overflow-x: hidden !important;
+}
+
+@font-face {
+  font-family: 'mzdesign';
+  src: url("../fonts/Bangers-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'CodeInAja';
+  src: url("../fonts/LondrinaSolid-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'FlyFly';
+  src: url("../fonts/Lobster-Regular.ttf") format("truetype");
 }
 
 .jumbotron {
@@ -46,7 +62,7 @@ body {
 }
 
 .jumbotronTitle a {
-  background: white;
+  background: #fff;
   display: inline-block;
   color: #000;
   width: 160px;
@@ -61,8 +77,8 @@ body {
 }
 
 .jumbotronFeat {
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .jumbotronFeat .box {
@@ -81,6 +97,68 @@ body {
   font-size: 15px;
   line-height: 18px;
   color: grey;
+}
+
+.aboutUs {
+  font-family: "Ubuntu";
+}
+
+.aboutUs .aboutContent .txt h2 {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.aboutUs .aboutContent .txt a {
+  background: #2B2B2B;
+  display: inline-block;
+  color: #fff;
+  width: 160px;
+  padding: 5px;
+  text-decoration: none;
+  font-family: "Ubuntu";
+  border-radius: 5px;
+}
+
+.aboutUs .aboutContent .txt a:hover {
+  background: #222222;
+}
+
+.parallax-window {
+  min-height: 100px;
+  background: transparent;
+  margin-top: 165px;
+}
+
+.parallax-window .sponsorLogo {
+  position: relative;
+  z-index: 2 !important;
+}
+
+.parallax-window .sponsorLogo h2 {
+  text-shadow: 0px 0px 8px #000;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.parallax-window .sponsorLogo h2:nth-child(1) {
+  font-family: 'mzdesign';
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #fff;
+}
+
+.parallax-window .sponsorLogo h2:nth-child(2) {
+  font-family: 'CodeInAja';
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #fff;
+}
+
+.parallax-window .sponsorLogo h2:nth-child(3) {
+  font-family: 'FlyFly';
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #fff;
 }
 
 @media (min-width: 450px) and (max-width: 767px) {
@@ -399,5 +477,44 @@ body {
       left: -210%;
     }
   }
+}
+
+.crsl {
+  margin-top: 170px;
+}
+
+.crsl h2 {
+  font-weight: bold;
+  font-family: "Ubuntu";
+  font-size: 35px;
+}
+
+.carousels {
+  position: relative;
+}
+
+.carousels img {
+  border-radius: 50%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.carousels span {
+  font-size: 25px;
+  font-weight: bolder;
+  color: #BCBCBC;
+}
+
+.carousels .crSlides {
+  display: none;
+}
+
+.carousels .crSlides .info .username p {
+  line-height: 10px;
+}
+
+.carousels .crSlides h2 {
+  line-height: 10px;
+  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */
