@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  min-height: 3000px;
   overflow-x: hidden !important;
 }
 
@@ -159,6 +158,141 @@ body {
   padding: 0 !important;
   margin: 0 !important;
   color: #fff;
+}
+
+.crsl {
+  margin-top: 170px;
+}
+
+.crsl h2 {
+  font-weight: bold;
+  font-family: "Ubuntu";
+  font-size: 35px;
+}
+
+.carousels {
+  position: relative;
+}
+
+.carousels img {
+  border-radius: 50%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.carousels span {
+  font-size: 25px;
+  font-weight: bolder;
+  color: #BCBCBC;
+}
+
+.carousels .crSlides {
+  display: none;
+}
+
+.carousels .crSlides .info .username p {
+  line-height: 10px;
+}
+
+.carousels .crSlides h2 {
+  line-height: 10px;
+  font-size: 20px;
+}
+
+.footer {
+  margin-top: 120px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: "Ubuntu";
+  background-color: #313131;
+}
+
+.footer input::-webkit-input-placeholder {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+
+.footer input:focus {
+  border: none !important;
+  -webkit-box-shadow: 0px 0px 0px 3px #6960F5 !important;
+          box-shadow: 0px 0px 0px 3px #6960F5 !important;
+}
+
+.footer input:focus::-webkit-input-placeholder {
+  color: #6960F5 !important;
+}
+
+.footer input:focus:-ms-input-placeholder {
+  color: #6960F5 !important;
+}
+
+.footer input:focus::-ms-input-placeholder {
+  color: #6960F5 !important;
+}
+
+.footer input:focus::placeholder {
+  color: #6960F5 !important;
+}
+
+.footer .left {
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+}
+
+.footer .left .forms form .d-flex .rightForms textarea {
+  height: 82% !important;
+}
+
+.footer .left .forms form .d-flex .rightForms textarea:focus {
+  border: none !important;
+  -webkit-box-shadow: 0px 0px 0px 3px #6960F5 !important;
+          box-shadow: 0px 0px 0px 3px #6960F5 !important;
+}
+
+.footer .formButton {
+  background: #6960F5;
+  width: 165px;
+}
+
+.footer .formButton:hover {
+  background-color: #554cd4;
+}
+
+.footer .right {
+  padding: 50px;
+  font-family: "Ubuntu";
+  color: white;
+}
+
+.footer .right li {
+  color: grey;
+  list-style: none;
+  line-height: 40px;
+}
+
+.footer .right li:hover {
+  cursor: pointer;
+  color: #DCDCDC;
+}
+
+.footer .right .moreInfo {
+  margin-top: 45px;
+}
+
+.footer .right .moreInfo .d-flex a {
+  font-family: FontAwesome;
+  color: grey;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 19px;
+}
+
+.footer .right .moreInfo .d-flex a:hover {
+  cursor: pointer;
+  color: #DCDCDC;
 }
 
 @media (min-width: 450px) and (max-width: 767px) {
@@ -477,44 +611,8 @@ body {
       left: -210%;
     }
   }
-}
-
-.crsl {
-  margin-top: 170px;
-}
-
-.crsl h2 {
-  font-weight: bold;
-  font-family: "Ubuntu";
-  font-size: 35px;
-}
-
-.carousels {
-  position: relative;
-}
-
-.carousels img {
-  border-radius: 50%;
-  margin-top: 50px;
-  margin-bottom: 20px;
-}
-
-.carousels span {
-  font-size: 25px;
-  font-weight: bolder;
-  color: #BCBCBC;
-}
-
-.carousels .crSlides {
-  display: none;
-}
-
-.carousels .crSlides .info .username p {
-  line-height: 10px;
-}
-
-.carousels .crSlides h2 {
-  line-height: 10px;
-  font-size: 20px;
+  .footer .left {
+    padding: none !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -5,11 +5,12 @@
     $commentTextColor: #707070;
     $fontBlackColor: #000;
     $borderRadius:10px;
+    $purple: #6960F5;
+    $darkColor: #313131;
     
 body {
     margin:0;
     padding:0;
-    min-height: 3000px;
     overflow-x: hidden !important;
 }
 @font-face {
@@ -229,10 +230,6 @@ body {
     }
 }
 
-
-
-
-
 .aboutUs {
     font-family: $fontfamily;
     & .aboutContent {
@@ -286,21 +283,6 @@ body {
     }
 
 }
-@media (min-width: 450px) and (max-width: 767px) {
-    @include navMe();
-
-    .jumbotronTitle p {
-        font-size: 28px;
-        line-height: 25px;
-    }
-
-    @include jumbotronFeat(-104.5%, -208%);
-}
-
-@media (max-width:450px) {
-    @include navMe();
-    @include jumbotronFeat(-105.3%, -210%);
-}
 
 
 
@@ -332,6 +314,109 @@ body {
         & h2 {
             line-height:10px;
             font-size: 20px;
+        }
+    }
+}
+
+
+
+// footer
+.footer {
+    margin-top: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-family: $fontfamily;
+    background-color: $darkColor;
+    & input {
+        &::-webkit-input-placeholder {
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+    }
+        &:focus {
+            &::placeholder {
+                color: $purple !important;
+            }
+            border: none !important;
+            box-shadow:0px 0px 0px 3px $purple !important;
+        }
+    }
+    & .left {
+        // margin-right: 80px !important;
+        padding: 30px;
+        background: white;
+        border-radius: 10px;
+        & .forms form {
+            & .d-flex .rightForms {
+                & textarea {
+                    height: 82% !important;
+                    &:focus {
+                        border: none !important;
+                        box-shadow:0px 0px 0px 3px $purple !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .formButton {
+        background: $purple;
+        width: 165px;
+        &:hover {
+            background-color:  #554cd4;
+        }
+    }
+
+
+    .right {
+        padding: 50px;
+
+        font-family: $fontfamily;
+        color: white;
+        li {
+            color: grey;
+            list-style: none;
+            line-height: 40px;
+            &:hover {
+                cursor: pointer;
+                color: $fontcolor2;
+            }
+        }
+        & .moreInfo {
+            margin-top: 45px;
+        }
+        & .moreInfo .d-flex a{
+            font-family: FontAwesome;
+            color: grey;
+            font-weight: 600;
+            font-size: 20px;
+            margin-left: 19px;
+            &:hover {
+                cursor: pointer;
+                color: $fontcolor2;
+            }
+        }
+    }
+}
+
+@media (min-width: 450px) and (max-width: 767px) {
+    @include navMe();
+
+    .jumbotronTitle p {
+        font-size: 28px;
+        line-height: 25px;
+    }
+
+    @include jumbotronFeat(-104.5%, -208%);
+}
+
+@media (max-width:450px) {
+    @include navMe();
+    @include jumbotronFeat(-105.3%, -210%);
+    .footer {
+        & .left {
+            padding: none !important;
         }
     }
 }
