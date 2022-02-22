@@ -233,12 +233,9 @@ body {
 .aboutUs {
     font-family: $fontfamily;
     & .aboutContent {
-        & .img img {
-            // width: 100%;
-        }
         & .txt h2 {
             font-weight: bold;
-        font-size: 35px;
+            font-size: 35px;
 
         }
         & .txt a {
